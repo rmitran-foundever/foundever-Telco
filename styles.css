@@ -687,6 +687,41 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
   line-height: 1.7;
 }
 
+.case-results {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 8px 0 32px;
+}
+
+.case-result {
+  border-left: 3px solid var(--purple-light);
+  padding-left: 18px;
+}
+
+.case-result-num {
+  font-size: clamp(36px, 4vw, 48px);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1.5px;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+
+.case-result-lbl {
+  font-size: 15px;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.4;
+}
+
+.case-study.case-study--light .case-result-num {
+  color: var(--dark-navy);
+}
+
+.case-study.case-study--light .case-result-lbl {
+  color: var(--gray-text);
+}
+
 .case-study-image {
   background: linear-gradient(135deg, rgba(90,79,255,0.2), rgba(123,111,255,0.1));
   border-radius: var(--radius-card);
