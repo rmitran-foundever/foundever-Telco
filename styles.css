@@ -687,6 +687,12 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
   line-height: 1.7;
 }
 
+.case-study-eyebrow--results {
+  margin-top: 12px;
+  letter-spacing: 1.2px;
+  font-weight: 500;
+}
+
 .case-results {
   display: flex;
   flex-direction: column;
