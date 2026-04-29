@@ -113,14 +113,14 @@ if (track) {
         { text: 'We hit SLAs but at significant overtime cost', score: 2 },
         { text: 'Surge plans exist but require manual orchestration', score: 3 },
         { text: 'Surge handling is mostly automated with documented playbooks', score: 4 },
-        { text: 'Capacity flexes within hours, with predictive forecasting and cross\u2011skilled teams', score: 5 }
+        { text: 'Capacity flexes within hours, with predictive forecasting and cross skilled teams', score: 5 }
       ]
     },
     {
-      dimension: 'Margin\u2011resilient and growth\u2011ready operations',
+      dimension: 'Margin resilient and growth ready operations',
       text: 'How clearly can you tie CX operations spend to ARPU, churn, or revenue outcomes?',
       options: [
-        { text: 'We can\u2019t \u2014 it\u2019s tracked as pure cost', score: 1 },
+        { text: 'We can\u2019t. It\u2019s tracked as pure cost', score: 1 },
         { text: 'We see departmental costs, no link to commercial outcomes', score: 2 },
         { text: 'We can model some links anecdotally', score: 3 },
         { text: 'Most CX spend ties to a named commercial outcome', score: 4 },
@@ -131,16 +131,16 @@ if (track) {
       dimension: 'Workflow integration and system connectivity',
       text: 'How well integrated are your CX workflows with BSS, OSS, billing, and provisioning systems?',
       options: [
-        { text: 'Manual handoffs and re\u2011keying between systems', score: 1 },
+        { text: 'Manual handoffs and rekeying between systems', score: 1 },
         { text: 'Partial integrations; agents copy and paste regularly', score: 2 },
         { text: 'Core systems integrated; reporting still partly manual', score: 3 },
         { text: 'End to end flows; agents work in one pane of glass', score: 4 },
-        { text: 'Real time, bi\u2011directional integration with full data lineage', score: 5 }
+        { text: 'Real time, bidirectional integration with full data lineage', score: 5 }
       ]
     },
     {
-      dimension: 'Human + AI collaboration',
-      text: 'Where are you on AI adoption inside the contact centre?',
+      dimension: 'AI in the contact operation',
+      text: 'Where is AI deployed in your contact operation, and what outcome does it own?',
       options: [
         { text: 'Not deployed in production yet', score: 1 },
         { text: 'Pilots only (transcription, sentiment) without scale', score: 2 },
@@ -151,7 +151,7 @@ if (track) {
     },
     {
       dimension: 'Regulatory and data sovereignty readiness',
-      text: 'How well can you evidence telecoms fairness obligations (Ofcom, BEREC), vulnerable customer handling, and data sovereignty across your CX operation?',
+      text: 'How well can you evidence Ofcom and EECC obligations (One Touch Switching, vulnerable consumers, fair treatment) and data sovereignty across your CX operation?',
       options: [
         { text: 'Evidence is reactive, gathered when asked', score: 1 },
         { text: 'Some processes documented; gaps when challenged', score: 2 },
@@ -167,24 +167,24 @@ if (track) {
       name: 'Reactive',
       range: [1.0, 1.8],
       desc: 'Your operation is in firefight mode. SLAs slip, regulators ask hard questions, and AI is more conversation than deployment.',
-      next: 'Stabilising. Close the basics first \u2014 surge plans, integrated systems, evidence trails \u2014 before reaching for AI.'
+      next: 'Stabilising. Close the basics first: surge plans, integrated systems, evidence trails. Then reach for AI.'
     },
     {
       name: 'Stabilising',
       range: [1.81, 2.6],
       desc: 'The worst gaps are patched. Operations run, but cost to serve creeps and you can\u2019t yet tie CX spend to commercial outcomes.',
-      next: 'Scaling. Make the operation defensible: integrated workflows, named commercial outcomes per pound spent, documented compliance.'
+      next: 'Scaling. Make the operation defensible: integrated workflows, named commercial outcomes per unit spent, documented compliance.'
     },
     {
       name: 'Scaling',
       range: [2.61, 3.4],
       desc: 'Foundations are in place. CX runs to plan, integrations are real, and AI pilots are starting to land. The challenge: pilot to portfolio.',
-      next: 'AI\u2011Assisted. Embed AI across the operation, tie spend to P&L, and turn compliance evidence into continuous monitoring.'
+      next: 'AI Assisted. Embed AI across the operation, tie spend to P&L, and turn compliance evidence into continuous monitoring.'
     },
     {
-      name: 'AI\u2011Assisted',
+      name: 'AI Assisted',
       range: [3.41, 4.2],
-      desc: 'Augmented by AI in the right places. Integrations are bi\u2011directional. Fairness and vulnerable customer evidence is automated. You\u2019re ahead of most operators.',
+      desc: 'Augmented by AI in the right places. Integrations are bidirectional. Fairness and vulnerable customer evidence is automated. You\u2019re ahead of most operators.',
       next: 'Resilient. Treat regulatory posture as a commercial asset, scale predictive forecasting, and make AI governance a competitive moat.'
     },
     {
