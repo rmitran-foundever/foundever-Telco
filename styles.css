@@ -337,11 +337,11 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
   max-width: 1100px;
 }
 
-/* Top zone: headline + 2 big scale stats in a 3-col grid */
+/* Top zone: headline + 3 big scale stats in a 4-col grid */
 .istats-top {
   display: grid;
-  grid-template-columns: 1.3fr 1fr 1fr;
-  gap: 48px;
+  grid-template-columns: 1.3fr 1fr 1fr 1fr;
+  gap: 40px;
   align-items: start;
   margin-bottom: 48px;
 }
