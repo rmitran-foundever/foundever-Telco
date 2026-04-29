@@ -107,7 +107,7 @@ if (track) {
   const questions = [
     {
       dimension: 'Operational resilience and scalability',
-      text: 'How does your CX operation handle volume surges (renewal peaks, weather events, regulatory shifts)?',
+      text: 'How does your CX operation handle volume surges (tariff launches, network outages, billing cycles, device launches)?',
       options: [
         { text: 'We routinely miss SLAs during peaks', score: 1 },
         { text: 'We hit SLAs but at significant overtime cost', score: 2 },
@@ -118,18 +118,18 @@ if (track) {
     },
     {
       dimension: 'Margin\u2011resilient and growth\u2011ready operations',
-      text: 'How clearly can you tie CX operations spend to loss ratio, retention, or revenue outcomes?',
+      text: 'How clearly can you tie CX operations spend to ARPU, churn, or revenue outcomes?',
       options: [
         { text: 'We can\u2019t \u2014 it\u2019s tracked as pure cost', score: 1 },
         { text: 'We see departmental costs, no link to commercial outcomes', score: 2 },
         { text: 'We can model some links anecdotally', score: 3 },
         { text: 'Most CX spend ties to a named commercial outcome', score: 4 },
-        { text: 'Every CX investment maps to loss ratio, retention, or revenue in our P&L', score: 5 }
+        { text: 'Every CX investment maps to ARPU, churn, or revenue in our P&L', score: 5 }
       ]
     },
     {
       dimension: 'Workflow integration and system connectivity',
-      text: 'How well integrated are your CX workflows with policy admin, claims, and underwriting systems?',
+      text: 'How well integrated are your CX workflows with BSS, OSS, billing, and provisioning systems?',
       options: [
         { text: 'Manual handoffs and re\u2011keying between systems', score: 1 },
         { text: 'Partial integrations; agents copy and paste regularly', score: 2 },
@@ -151,7 +151,7 @@ if (track) {
     },
     {
       dimension: 'Regulatory and data sovereignty readiness',
-      text: 'How well can you evidence Consumer Duty, vulnerable customer handling, and data sovereignty across your CX operation?',
+      text: 'How well can you evidence telecoms fairness obligations (Ofcom, BEREC), vulnerable customer handling, and data sovereignty across your CX operation?',
       options: [
         { text: 'Evidence is reactive, gathered when asked', score: 1 },
         { text: 'Some processes documented; gaps when challenged', score: 2 },
@@ -184,14 +184,14 @@ if (track) {
     {
       name: 'AI\u2011Assisted',
       range: [3.41, 4.2],
-      desc: 'Augmented by AI in the right places. Integrations are bi\u2011directional. Consumer Duty evidence is automated. You\u2019re ahead of most carriers.',
+      desc: 'Augmented by AI in the right places. Integrations are bi\u2011directional. Fairness and vulnerable customer evidence is automated. You\u2019re ahead of most operators.',
       next: 'Resilient. Treat regulatory posture as a commercial asset, scale predictive forecasting, and make AI governance a competitive moat.'
     },
     {
       name: 'Resilient',
       range: [4.21, 5.0],
       desc: 'You\u2019re operating at the front edge. AI is embedded, the operation flexes within hours, and your regulatory posture is a commercial asset, not a cost.',
-      next: 'Stay there. The challenge is preserving the edge as scale, M&A, and regulatory shifts test the model. We\u2019d benchmark you against peer carriers and stress test the AI governance layer.'
+      next: 'Stay there. The challenge is preserving the edge as scale, M&A, and regulatory shifts test the model. We\u2019d benchmark you against peer operators and stress test the AI governance layer.'
     }
   ];
 
