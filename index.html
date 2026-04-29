@@ -414,15 +414,15 @@
       <div class="assessment-wrap">
         <!-- INTRO -->
         <div class="assess-screen" id="screen-intro" data-active="true">
-          <span class="assess-eyebrow">{{ASSESSMENT_EYEBROW}}</span>
-          <h2 class="assess-title">{{ASSESSMENT_TITLE}}</h2>
-          <p class="assess-desc">{{ASSESSMENT_DESC}}</p>
+          <span class="assess-eyebrow">CX Impact Assessment</span>
+          <h2 class="assess-title">Find your CX impact on LTV</h2>
+          <p class="assess-desc">Most telcos track support costs, not support's impact on customer lifetime value. This 5 question assessment reveals how your CX operations are protecting or eroding LTV.</p>
           <div class="assess-meta">
-            <span>{{ASSESSMENT_META_1}}</span>
-            <span>{{ASSESSMENT_META_2}}</span>
-            <span>{{ASSESSMENT_META_3}}</span>
+            <span>5 questions</span>
+            <span>60 seconds</span>
+            <span>Instant LTV benchmark</span>
           </div>
-          <button type="button" class="assess-btn-primary" data-action="start">{{ASSESSMENT_START_LABEL}} <span class="arrow">&rarr;</span></button>
+          <button type="button" class="assess-btn-primary" data-action="start">Start the assessment <span class="arrow">&rarr;</span></button>
         </div>
 
         <!-- QUESTION (driven by script.js) -->
@@ -433,6 +433,7 @@
           <span class="assess-counter">Question <span class="assess-q-current">1</span> of <span class="assess-q-total">5</span></span>
           <span class="assess-eyebrow assess-dimension"></span>
           <h3 class="assess-question"></h3>
+          <p class="assess-context"></p>
           <div class="assess-options" role="radiogroup" aria-label="Answer options"></div>
           <div class="assess-nav">
             <button type="button" class="assess-btn-secondary" data-action="back">&larr; Back</button>
@@ -444,8 +445,12 @@
 
         <!-- RESULTS -->
         <div class="assess-screen" id="screen-results">
-          <span class="assess-eyebrow">Your maturity stage</span>
+          <span class="assess-eyebrow">Your CX impact score</span>
+          <div class="assess-score-row">
+            <span class="assess-score-num">0</span><span class="assess-score-divider">/</span><span class="assess-score-total">25</span>
+          </div>
           <h2 class="assess-stage-name"></h2>
+          <span class="assess-impact-label"></span>
           <p class="assess-stage-desc"></p>
 
           <div class="assess-spectrum">
@@ -453,21 +458,35 @@
               <div class="assess-spectrum-marker"></div>
             </div>
             <div class="assess-spectrum-labels">
-              <span>{{STAGE_1}}</span>
-              <span>{{STAGE_2}}</span>
-              <span>{{STAGE_3}}</span>
-              <span>{{STAGE_4}}</span>
-              <span>{{STAGE_5}}</span>
+              <span>Cost Center</span>
+              <span>Aware</span>
+              <span>Tracking</span>
+              <span>Value Driven</span>
+              <span>Maximized</span>
             </div>
           </div>
 
+          <div class="assess-analysis">
+            <h3 class="assess-analysis-title"></h3>
+            <ul class="assess-analysis-lines"></ul>
+            <div class="assess-analysis-total">
+              <span class="assess-analysis-total-label"></span>
+              <span class="assess-analysis-total-value"></span>
+            </div>
+          </div>
+
+          <div class="assess-actions">
+            <h3 class="assess-actions-title"></h3>
+            <ol class="assess-actions-list"></ol>
+          </div>
+
           <div class="assess-next-box">
-            <span class="assess-next-eyebrow">What this means for your operation</span>
+            <span class="assess-next-eyebrow">Next step</span>
             <p class="assess-stage-next"></p>
           </div>
 
           <form class="assess-email-form">
-            <label class="assess-email-label" for="assess-email">{{ASSESSMENT_EMAIL_LABEL}}</label>
+            <label class="assess-email-label" for="assess-email">Get your detailed roadmap</label>
             <div class="assess-email-row">
               <input type="email" id="assess-email" name="email" required placeholder="you@yourcompany.com" class="assess-email-input">
               <button type="submit" class="assess-btn-primary assess-email-submit">
@@ -476,7 +495,7 @@
             </div>
           </form>
 
-          <button type="button" class="assess-btn-text" data-action="retake">{{ASSESSMENT_RETAKE_LABEL}}</button>
+          <button type="button" class="assess-btn-text" data-action="retake">Retake the assessment</button>
         </div>
       </div>
 

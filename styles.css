@@ -1354,6 +1354,175 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
   margin: 0;
 }
 
+/* Question context line under the question text */
+.assess-context {
+  font-size: 13px;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.55);
+  margin: -8px 0 16px;
+  line-height: 1.5;
+}
+
+/* Score header on results screen */
+.assess-score-row {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+.assess-score-num {
+  font-size: 64px;
+  font-weight: 800;
+  color: #a5aaff;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+.assess-score-divider,
+.assess-score-total {
+  font-size: 26px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 400;
+}
+
+.assess-impact-label {
+  display: inline-block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 4px 0 12px;
+  padding: 4px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+}
+
+/* Analysis section */
+.assess-analysis,
+.assess-actions {
+  margin: 20px 0;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+.assess-analysis-title,
+.assess-actions-title {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #a5aaff;
+  font-weight: 600;
+  margin: 0 0 14px;
+}
+
+.assess-analysis-lines {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.assess-analysis-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+}
+.assess-analysis-line:first-child { padding-top: 0; }
+.assess-analysis-line:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.assess-analysis-line-text {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.4;
+}
+.assess-analysis-line-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.assess-analysis-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(165, 170, 255, 0.3);
+}
+.assess-analysis-total-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #a5aaff;
+  font-weight: 600;
+}
+.assess-analysis-total-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #a5aaff;
+  white-space: nowrap;
+}
+
+/* Actions section */
+.assess-actions-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  counter-reset: assess-action-counter;
+}
+.assess-action {
+  position: relative;
+  padding: 14px 16px 14px 48px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  counter-increment: assess-action-counter;
+}
+.assess-action::before {
+  content: counter(assess-action-counter);
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #a5aaff;
+  color: #1a1d3a;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.assess-action-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 6px;
+  line-height: 1.4;
+}
+.assess-action-impact,
+.assess-action-value {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 4px 0 0;
+  line-height: 1.5;
+}
+.assess-action-impact strong,
+.assess-action-value strong {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 600;
+}
+
 .assess-email-form { margin-top: 8px; }
 .assess-email-label {
   display: block;
