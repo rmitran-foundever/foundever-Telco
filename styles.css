@@ -382,7 +382,7 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
 /* Bottom zone: 4 outcome stats, number-left + label-right */
 .istats-outcomes {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 32px;
   margin-bottom: 48px;
 }
