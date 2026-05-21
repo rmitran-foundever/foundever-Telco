@@ -340,6 +340,12 @@ if (track) {
     else if (action === 'back') back();
     else if (action === 'retake') retake();
   });
+
+  // CTAs elsewhere on the page that launch the assessment directly.
+  // The href="#cta" smooth-scroll handles scrolling; this starts question 1.
+  document.querySelectorAll('[data-start-assessment]').forEach(function(cta) {
+    cta.addEventListener('click', function() { start(); });
+  });
 })();
 
 // ===== AI Philosophy accordion =====
