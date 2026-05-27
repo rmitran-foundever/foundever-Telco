@@ -868,6 +868,26 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
   .why-grid { grid-template-columns: 1fr; gap: 28px; }
 }
 
+/* ===== WHO WE SERVE (reuses .why-pillar styling) ===== */
+.who-we-serve {
+  background: var(--white);
+  padding: 96px 0;
+}
+.who-we-serve .eyebrow {
+  display: block;
+  margin-bottom: 48px;
+}
+.who-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+}
+
+@media (max-width: 768px) {
+  .who-we-serve { padding: 56px 0; }
+  .who-grid { grid-template-columns: 1fr; gap: 28px; }
+}
+
 /* ===== INSIGHTS ===== */
 .insights {
   padding: 80px 0;
