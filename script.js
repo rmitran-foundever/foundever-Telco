@@ -347,3 +347,15 @@ if (track) {
     cta.addEventListener('click', function() { start(); });
   });
 })();
+
+// ===== Why Foundever accordion =====
+(function() {
+  const pillars = document.querySelectorAll('.why-pillar');
+  if (!pillars.length) return;
+  pillars.forEach(p => {
+    p.addEventListener('click', () => {
+      const open = p.getAttribute('aria-expanded') === 'true';
+      p.setAttribute('aria-expanded', open ? 'false' : 'true');
+    });
+  });
+})();

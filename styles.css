@@ -809,20 +809,58 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
 .why-pillar {
   display: flex;
   flex-direction: column;
-  padding-top: 24px;
+  padding: 24px 0 0;
+  background: transparent;
+  border: none;
   border-top: 2px solid var(--purple);
+  border-radius: 0;
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+  align-self: start;
+}
+.why-pillar-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
 }
 .why-pillar-title {
+  display: block;
   font-size: clamp(22px, 2.2vw, 28px);
   font-weight: 700;
   color: var(--dark-navy);
   line-height: 1.25;
-  margin-bottom: 14px;
+  flex: 1;
+}
+.why-pillar-toggle {
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--purple);
+  line-height: 1;
+  margin-top: 2px;
+  transition: transform 0.25s ease;
+}
+.why-pillar[aria-expanded="true"] .why-pillar-toggle {
+  transform: rotate(45deg);
 }
 .why-pillar-desc {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
   font-size: 16px;
   color: var(--gray-text);
   line-height: 1.6;
+  transition: max-height 0.35s ease, opacity 0.3s ease, margin-top 0.3s ease;
+}
+.why-pillar[aria-expanded="true"] .why-pillar-desc {
+  max-height: 220px;
+  opacity: 1;
+  margin-top: 14px;
+}
+.why-pillar:focus-visible {
+  outline: 2px solid var(--purple-light);
+  outline-offset: 4px;
 }
 
 @media (max-width: 768px) {
