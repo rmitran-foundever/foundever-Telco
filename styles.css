@@ -792,146 +792,42 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
 .case-study .btn-success .arrow { transition: transform 0.2s; }
 .case-study .btn-success:hover .arrow { transform: translateX(3px); }
 
-/* ===== AI PHILOSOPHY ===== */
-.ai-philosophy {
-  margin-top: 88px;
+/* ===== WHY FOUNDEVER ===== */
+.why-foundever {
+  background: var(--white);
+  padding: 96px 0;
+}
+.why-foundever .eyebrow {
+  display: block;
+  margin-bottom: 48px;
+}
+.why-grid {
   display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: 64px;
-  align-items: stretch;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
 }
-.ai-phil-left {
+.why-pillar {
   display: flex;
   flex-direction: column;
+  padding-top: 24px;
+  border-top: 2px solid var(--purple);
 }
-.ai-phil-left .eyebrow {
-  display: block;
-  margin-bottom: 20px;
-}
-.ai-phil-headline {
-  color: var(--dark-navy);
-  font-size: clamp(28px, 3vw, 42px);
+.why-pillar-title {
+  font-size: clamp(22px, 2.2vw, 28px);
   font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -0.5px;
+  color: var(--dark-navy);
+  line-height: 1.25;
+  margin-bottom: 14px;
 }
-.ai-phil-items {
-  margin-top: auto;
-  padding-top: 56px;
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-}
-.ai-phil-item {
-  text-align: left;
-  background: transparent;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  font-family: inherit;
-}
-.ai-phil-item-title {
-  display: block;
-  font-size: 22px;
-  font-weight: 600;
-  line-height: 1.3;
-  color: rgba(9, 9, 45, 0.32);
-  transition: color 0.2s ease;
-}
-.ai-phil-item:hover .ai-phil-item-title { color: rgba(9, 9, 45, 0.6); }
-.ai-phil-item.active .ai-phil-item-title { color: var(--dark-navy); }
-.ai-phil-item-desc {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  color: var(--gray-text);
+.why-pillar-desc {
   font-size: 16px;
+  color: var(--gray-text);
   line-height: 1.6;
-  max-width: 440px;
-  transition: max-height 0.35s ease, opacity 0.3s ease, margin-top 0.3s ease;
-}
-.ai-phil-item.active .ai-phil-item-desc {
-  max-height: 200px;
-  opacity: 1;
-  margin-top: 12px;
-}
-.ai-phil-media {
-  position: relative;
-  aspect-ratio: 1 / 1;
-  border-radius: var(--radius-card);
-  overflow: hidden;
-  background: linear-gradient(160deg, var(--dark-navy-mid), var(--dark-navy));
-}
-.ai-phil-graphic {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 32px;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-.ai-phil-graphic.active { opacity: 1; }
-.ai-phil-flow-pill {
-  font-size: 12px;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.85);
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 999px;
-  padding: 8px 18px;
-  text-align: center;
-}
-.ai-phil-arrow {
-  color: rgba(255, 255, 255, 0.35);
-  font-size: 15px;
-  line-height: 1;
-}
-.ai-phil-pod {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-  width: 100%;
-  max-width: 310px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 16px;
-  padding: 18px 16px;
-}
-.ai-phil-pod-title {
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.2px;
-  color: var(--purple-light);
-  text-align: center;
-  margin-bottom: 6px;
-}
-.ai-phil-cap {
-  font-size: 12px;
-  font-weight: 500;
-  color: #ffffff;
-  background: rgba(123, 111, 255, 0.16);
-  border: 1px solid rgba(123, 111, 255, 0.32);
-  border-radius: 999px;
-  padding: 7px 14px;
-  text-align: center;
-}
-.ai-phil-cap--agent {
-  background: var(--purple);
-  border-color: var(--purple);
 }
 
 @media (max-width: 768px) {
-  .ai-philosophy {
-    grid-template-columns: 1fr;
-    gap: 32px;
-    margin-top: 56px;
-  }
-  .ai-phil-headline { font-size: 26px; }
-  .ai-phil-items { padding-top: 28px; }
+  .why-foundever { padding: 56px 0; }
+  .why-grid { grid-template-columns: 1fr; gap: 28px; }
 }
 
 /* ===== INSIGHTS ===== */

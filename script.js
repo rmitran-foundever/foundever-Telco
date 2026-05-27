@@ -347,17 +347,3 @@ if (track) {
     cta.addEventListener('click', function() { start(); });
   });
 })();
-
-// ===== AI Philosophy accordion =====
-(function() {
-  const items = document.querySelectorAll('.ai-phil-item');
-  const graphics = document.querySelectorAll('.ai-phil-graphic');
-  if (!items.length) return;
-  items.forEach(item => {
-    item.addEventListener('click', () => {
-      const idx = item.dataset.phil;
-      items.forEach(i => i.classList.toggle('active', i === item));
-      graphics.forEach(g => g.classList.toggle('active', g.dataset.philImg === idx));
-    });
-  });
-})();
