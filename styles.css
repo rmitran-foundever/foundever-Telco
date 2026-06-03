@@ -819,6 +819,12 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
   font-family: inherit;
   align-self: start;
 }
+.why-pillar-icon {
+  width: 48px;
+  height: 48px;
+  display: block;
+  margin-bottom: 20px;
+}
 .why-pillar-head {
   display: flex;
   justify-content: space-between;
