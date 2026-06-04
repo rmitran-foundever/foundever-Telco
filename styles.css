@@ -923,51 +923,84 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
   .why-grid { grid-template-columns: 1fr; gap: 28px; }
 }
 
-/* ===== WHO WE SERVE (3-segment grid) ===== */
+/* ===== WHO WE SERVE (photo left, accordion right) ===== */
 .who-we-serve {
   background: var(--white);
   padding: 56px 0 96px;
 }
-.who-we-serve .eyebrow {
-  display: block;
-  margin-bottom: 48px;
-  text-align: center;
-}
-.who-grid {
+.who-we-layout {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 56px;
+  align-items: stretch;
+}
+.who-we-photo {
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  background: var(--gray-bg);
+  min-height: 520px;
+}
+.who-we-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.who-we-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.who-we-text .eyebrow {
+  display: block;
+  margin-bottom: 14px;
+  text-align: left;
+}
+.who-we-title {
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 700;
+  color: var(--dark-navy);
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+  margin: 0 0 32px;
+}
+.serve-stack {
+  display: flex;
+  flex-direction: column;
 }
 .serve-segment {
   display: flex;
   flex-direction: column;
   background: transparent;
   border: none;
+  border-top: 1px solid rgba(9, 9, 45, 0.12);
   border-radius: 0;
-  padding: 0;
+  padding: 20px 0;
   cursor: pointer;
   font-family: inherit;
   text-align: left;
-  align-self: start;
+}
+.serve-segment:last-child {
+  border-bottom: 1px solid rgba(9, 9, 45, 0.12);
 }
 .serve-segment-head {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 16px;
-  border-bottom: 2px solid var(--purple);
-  padding-bottom: 18px;
+  border-bottom: none;
+  padding-bottom: 0;
 }
 .serve-segment-vp {
-  font-size: clamp(19px, 1.7vw, 22px);
+  font-size: clamp(17px, 1.5vw, 20px);
   font-weight: 700;
   color: var(--dark-navy);
-  line-height: 1.3;
+  line-height: 1.35;
   margin: 0;
   flex: 1;
 }
 .serve-segment-toggle {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 300;
   color: var(--purple);
   line-height: 1;
@@ -986,7 +1019,7 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
 .serve-segment[aria-expanded="true"] .serve-segment-body {
   max-height: 360px;
   opacity: 1;
-  padding-top: 18px;
+  padding-top: 14px;
 }
 .serve-segment-types {
   font-size: 12.5px;
@@ -994,11 +1027,11 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
   font-weight: 600;
   letter-spacing: 0.3px;
   line-height: 1.4;
-  margin: 0 0 14px;
+  margin: 0 0 10px;
 }
 .serve-segment-services {
-  font-size: 14.5px;
-  line-height: 1.65;
+  font-size: 14px;
+  line-height: 1.6;
   color: var(--gray-text);
   margin: 0;
 }
@@ -1008,7 +1041,8 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
 }
 
 @media (max-width: 900px) {
-  .who-grid { grid-template-columns: 1fr; gap: 32px; }
+  .who-we-layout { grid-template-columns: 1fr; gap: 32px; }
+  .who-we-photo { min-height: 280px; }
 }
 @media (max-width: 768px) {
   .who-we-serve { padding: 48px 0 64px; }
