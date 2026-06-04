@@ -605,40 +605,6 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
   color: var(--white);
 }
 
-/* AI Pods proposition callout (Experience orchestration card) */
-.sol-ai-pods {
-  margin-top: 16px;
-  padding: 14px 16px;
-  background: rgba(90, 79, 255, 0.08);
-  border-left: 2px solid var(--purple-light);
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.sol-ai-pods-label {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-  color: var(--purple-light);
-  font-weight: 600;
-}
-.sol-ai-pods-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.sol-pill--ai {
-  background: var(--purple);
-  border-color: var(--purple);
-  color: var(--white);
-}
-.sol-pill--ai:hover {
-  background: var(--purple-light);
-  border-color: var(--purple-light);
-  color: var(--white);
-}
-
 /* CTA */
 .sol-card-cta {
   display: inline-flex;
