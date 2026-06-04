@@ -795,11 +795,21 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
 /* ===== WHY FOUNDEVER ===== */
 .why-foundever {
   background: var(--white);
-  padding: 96px 0;
+  padding: 48px 0 96px;
 }
 .why-foundever .eyebrow {
   display: block;
-  margin-bottom: 48px;
+  margin-bottom: 14px;
+  letter-spacing: 1.2px;
+}
+.why-foundever-title {
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 700;
+  color: var(--dark-navy);
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+  max-width: 760px;
+  margin-bottom: 56px;
 }
 .why-grid {
   display: grid;
