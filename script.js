@@ -348,14 +348,14 @@ if (track) {
   });
 })();
 
-// ===== Why Foundever accordion =====
+// ===== Click-to-expand accordions (Why Foundever pillars + Who we serve segments) =====
 (function() {
-  const pillars = document.querySelectorAll('.why-pillar');
-  if (!pillars.length) return;
-  pillars.forEach(p => {
-    p.addEventListener('click', () => {
-      const open = p.getAttribute('aria-expanded') === 'true';
-      p.setAttribute('aria-expanded', open ? 'false' : 'true');
+  const items = document.querySelectorAll('.why-pillar, .serve-segment');
+  if (!items.length) return;
+  items.forEach(el => {
+    el.addEventListener('click', () => {
+      const open = el.getAttribute('aria-expanded') === 'true';
+      el.setAttribute('aria-expanded', open ? 'false' : 'true');
     });
   });
 })();
