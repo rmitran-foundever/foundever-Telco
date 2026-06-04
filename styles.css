@@ -993,7 +993,7 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
 }
 .serve-segment-vp {
   font-size: clamp(17px, 1.5vw, 20px);
-  font-weight: 700;
+  font-weight: 500;
   color: var(--dark-navy);
   line-height: 1.35;
   margin: 0;
