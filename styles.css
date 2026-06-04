@@ -824,6 +824,7 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
   height: 48px;
   display: block;
   margin-bottom: 20px;
+  color: var(--dark-navy);
 }
 .why-pillar-head {
   display: flex;
