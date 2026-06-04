@@ -441,6 +441,7 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
 
 .solutions-header {
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .solutions-header .eyebrow { margin-bottom: 12px; }
@@ -801,6 +802,7 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
   display: block;
   margin-bottom: 14px;
   letter-spacing: 1.2px;
+  text-align: center;
 }
 .why-foundever-title {
   font-size: clamp(28px, 3vw, 40px);
@@ -809,7 +811,8 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
   line-height: 1.2;
   letter-spacing: -0.3px;
   max-width: 760px;
-  margin-bottom: 56px;
+  margin: 0 auto 56px;
+  text-align: center;
 }
 .why-grid {
   display: grid;
