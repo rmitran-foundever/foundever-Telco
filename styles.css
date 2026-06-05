@@ -989,11 +989,25 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
 }
 .serve-segment-types {
   font-size: 12.5px;
-  color: var(--purple);
-  font-weight: 600;
+  color: rgba(9, 9, 45, 0.55);
+  font-weight: 500;
   letter-spacing: 0.3px;
   line-height: 1.4;
   margin: 0 0 10px;
+}
+.serve-segment-num {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(9, 9, 45, 0.4);
+  letter-spacing: 0.5px;
+  align-self: flex-start;
+  margin-top: 6px;
+}
+.serve-segment[aria-expanded="true"] {
+  background: rgba(90, 79, 255, 0.04);
+}
+.serve-segment[aria-expanded="true"] .serve-segment-vp {
+  font-weight: 600;
 }
 .serve-segment-services {
   font-size: 14px;
