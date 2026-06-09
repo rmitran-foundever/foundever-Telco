@@ -1604,6 +1604,62 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
 .assess-spectrum-labels span:first-child { text-align: left; }
 .assess-spectrum-labels span:last-child { text-align: right; }
 
+/* ===== Lifecycle Revenue Leak Map (results) ===== */
+.leak-map {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin: 12px 0 18px;
+}
+.leak-map-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  padding: 12px 8px 14px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  transition: border-color 0.2s, background 0.2s;
+}
+.leak-map-stage-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 0.3px;
+  text-align: center;
+}
+.leak-map-stage-bar {
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+}
+.leak-map-stage[data-leak-level="low"]    .leak-map-stage-bar { background: #5cc985; }
+.leak-map-stage[data-leak-level="medium"] .leak-map-stage-bar { background: #ffb84d; }
+.leak-map-stage[data-leak-level="high"]   .leak-map-stage-bar { background: #ff6b6b; }
+.leak-map-stage.is-biggest {
+  background: rgba(255, 107, 107, 0.08);
+  border-color: rgba(255, 107, 107, 0.45);
+}
+.leak-map-stage.is-biggest .leak-map-stage-name { color: #ffffff; }
+.leak-map-callout {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0 0 22px;
+  letter-spacing: 0.2px;
+}
+.leak-map-callout strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+@media (max-width: 560px) {
+  .leak-map { grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .leak-map-stage { padding: 10px 4px 12px; }
+  .leak-map-stage-name { font-size: 10.5px; letter-spacing: 0.2px; }
+}
+
 .assess-next-box {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.10);

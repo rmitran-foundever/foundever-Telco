@@ -65,7 +65,7 @@
         <p>Make CX your accelerator for revenue and retention across every customer relationship, by orchestrating AI assisted operations and bringing excellence to every customer contact.</p>
         <div class="hero-cta-group">
           <a href="#cta" class="btn btn-cta-primary" data-start-assessment>
-            See your CX impact
+            Get your leak map
             <span class="arrow">&rarr;</span>
           </a>
           <a href="#cta" class="btn btn-dark">Let's talk</a>
@@ -149,7 +149,7 @@
       </div>
 
       <div class="stats-cta">
-        <a href="#cta" class="btn btn-primary" data-start-assessment>See your CX impact <span class="arrow">&rarr;</span></a>
+        <a href="#cta" class="btn btn-primary" data-start-assessment>Get your leak map <span class="arrow">&rarr;</span></a>
       </div>
     </div>
   </section>
@@ -518,15 +518,15 @@
       <div class="assessment-wrap">
         <!-- INTRO -->
         <div class="assess-screen" id="screen-intro" data-active="true">
-          <span class="assess-eyebrow">AI Value Assessment</span>
-          <h2 class="assess-title">Find where AI can scale across your customer ecosystem</h2>
-          <p class="assess-desc">Plugging in AI is the easy part. The value comes from deploying it at scale across your whole ecosystem, refined on real customer data, not one flow at a time. This 5 question assessment shows how close you are, and your first step to getting there.</p>
+          <span class="assess-eyebrow">The Lifecycle Revenue Leak Map</span>
+          <h2 class="assess-title">Where in your CX journey are you leaking revenue?</h2>
+          <p class="assess-desc">Across the telco lifecycle, most operators leak revenue at one specific stage and don't see it. This 5 question diagnostic finds yours, benchmarks it against top operators, and names the single move that closes the gap.</p>
           <div class="assess-meta">
             <span>5 questions</span>
-            <span>60 seconds</span>
-            <span>Instant AI value benchmark</span>
+            <span>3 minutes</span>
+            <span>Benchmarked against top operators</span>
           </div>
-          <button type="button" class="assess-btn-primary" data-action="start">Start the assessment <span class="arrow">&rarr;</span></button>
+          <button type="button" class="assess-btn-primary" data-action="start">Get my leak map <span class="arrow">&rarr;</span></button>
         </div>
 
         <!-- QUESTION (driven by script.js) -->
@@ -549,38 +549,47 @@
 
         <!-- RESULTS -->
         <div class="assess-screen" id="screen-results">
-          <span class="assess-eyebrow">Your AI value score</span>
-          <div class="assess-score-row">
-            <span class="assess-score-num">0</span><span class="assess-score-divider">/</span><span class="assess-score-total">25</span>
+          <span class="assess-eyebrow">Your Lifecycle Revenue Leak Map</span>
+
+          <div class="leak-map" aria-label="Lifecycle revenue leak map">
+            <div class="leak-map-stage" data-stage="acquire">
+              <span class="leak-map-stage-name">Acquire</span>
+              <span class="leak-map-stage-bar"></span>
+            </div>
+            <div class="leak-map-stage" data-stage="onboard">
+              <span class="leak-map-stage-name">Onboard</span>
+              <span class="leak-map-stage-bar"></span>
+            </div>
+            <div class="leak-map-stage" data-stage="serve">
+              <span class="leak-map-stage-name">Serve</span>
+              <span class="leak-map-stage-bar"></span>
+            </div>
+            <div class="leak-map-stage" data-stage="grow">
+              <span class="leak-map-stage-name">Grow</span>
+              <span class="leak-map-stage-bar"></span>
+            </div>
+            <div class="leak-map-stage" data-stage="save">
+              <span class="leak-map-stage-name">Save</span>
+              <span class="leak-map-stage-bar"></span>
+            </div>
           </div>
+          <p class="leak-map-callout">Your biggest leak: <strong class="leak-map-biggest"></strong></p>
+
           <h2 class="assess-stage-name"></h2>
           <p class="assess-stage-desc"></p>
 
-          <div class="assess-spectrum">
-            <div class="assess-spectrum-track">
-              <div class="assess-spectrum-marker"></div>
-            </div>
-            <div class="assess-spectrum-labels">
-              <span>Plugged in</span>
-              <span>Piloting</span>
-              <span>Scaling</span>
-              <span>Compounding</span>
-              <span>Native</span>
-            </div>
-          </div>
-
           <div class="assess-next-box">
-            <span class="assess-next-eyebrow">Your starting point</span>
+            <span class="assess-next-eyebrow">Your diagnosis</span>
             <p class="assess-startpoint"></p>
           </div>
 
           <div class="assess-next-box">
-            <span class="assess-next-eyebrow">Your next step</span>
+            <span class="assess-next-eyebrow">Your next move</span>
             <p class="assess-stage-next"></p>
           </div>
 
           <form class="assess-email-form">
-            <label class="assess-email-label" for="assess-email">Book your value audit</label>
+            <label class="assess-email-label" for="assess-email">Walk through your leak map with us</label>
             <div class="assess-email-row">
               <input type="email" id="assess-email" name="email" required placeholder="you@yourcompany.com" class="assess-email-input">
               <button type="submit" class="assess-btn-primary assess-email-submit">
@@ -589,7 +598,7 @@
             </div>
           </form>
 
-          <button type="button" class="assess-btn-text" data-action="retake">Retake the assessment</button>
+          <button type="button" class="assess-btn-text" data-action="retake">Retake the diagnostic</button>
         </div>
       </div>
 
@@ -635,7 +644,7 @@
                 </div>
                 <div class="cta-mockup-legend">
                   <div class="cta-mockup-legend-item"><span class="cta-mockup-legend-dot cta-mockup-legend-dot-1"></span>Retention</div>
-                  <div class="cta-mockup-legend-item"><span class="cta-mockup-legend-dot cta-mockup-legend-dot-2"></span>ARPU</div>
+                  <div class="cta-mockup-legend-item"><span class="cta-mockup-legend-dot cta-mockup-legend-dot-2"></span>Revenue per Subscriber</div>
                   <div class="cta-mockup-legend-item"><span class="cta-mockup-legend-dot cta-mockup-legend-dot-3"></span>Efficiency</div>
                 </div>
               </div>

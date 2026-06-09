@@ -73,114 +73,111 @@ if (track) {
   counters.forEach(c => observer.observe(c));
 })();
 
-// ===== AI Value Assessment =====
+// ===== Lifecycle Revenue Leak Diagnostic =====
 (function() {
   const wrap = document.querySelector('.assessment-wrap');
   if (!wrap) return;
 
   const questions = [
     {
-      dimension: 'Knowing where AI creates CX value',
-      text: 'Do you know where AI can lift the customer experience most across the journey?',
-      context: 'Most AI gets deployed where it is quickest to ship, not where customers feel it most.',
+      dimension: 'Acquire',
+      stage: 'Acquire',
+      text: 'When a new subscriber says yes, how does your CX operation pick them up?',
+      context: 'The handoff into CX is where retention starts or stalls.',
       options: [
-        { text: 'No, we deploy AI where it is easiest, not where customers feel it.', score: 1 },
-        { text: 'A rough sense, from instinct rather than data.', score: 2 },
-        { text: 'We have identified the moments, but not quantified the value.', score: 3 },
-        { text: 'We have a data backed map of where AI lifts the experience.', score: 4 },
-        { text: 'We continuously map AI value across the journey and reprioritise.', score: 5 }
+        { text: 'Reactive. We answer when they reach out.', score: 1 },
+        { text: 'Basic welcome touches, no measurement of impact.', score: 2 },
+        { text: 'Welcome programmes for high value cohorts only.', score: 3 },
+        { text: 'Structured welcome across the base, with measured impact on tenure.', score: 4 },
+        { text: 'Activation is treated as a retention moment. High risk cohorts segmented and intervened in real time.', score: 5 }
       ]
     },
     {
-      dimension: 'The customer data foundation',
-      text: 'Do you have real customer data, deep and clean enough for AI to learn from?',
-      context: 'AI is only as good as the customer data it learns from.',
+      dimension: 'Onboard',
+      stage: 'Onboard',
+      text: 'How does your operation handle the first 90 days, where most full year churn is decided?',
+      context: 'Most subscribers who leave inside year one make the decision in the first three months.',
       options: [
-        { text: 'No, our customer data is thin, siloed, or unusable for AI.', score: 1 },
-        { text: 'We have data, but not in a state AI can learn from.', score: 2 },
-        { text: 'Some journeys have usable data, coverage is patchy.', score: 3 },
-        { text: 'Most of the customer ecosystem feeds clean data into our AI.', score: 4 },
-        { text: 'Real customer data flows continuously, and AI learns from it in near real time.', score: 5 }
+        { text: 'The same as any other tenure. No early life segmentation.', score: 1 },
+        { text: 'We know early life is risky but have no specific programme.', score: 2 },
+        { text: 'We respond reactively to early life signals like complaints or missed payments.', score: 3 },
+        { text: 'Proactive outreach to early life cohorts, with a clear playbook.', score: 4 },
+        { text: 'Early life risk is detected in week one, intervened by week four. Cohort tenure measured separately.', score: 5 }
       ]
     },
     {
-      dimension: 'Beyond one flow at a time',
-      text: 'Is AI deployed flow by flow, or across your whole customer ecosystem?',
-      context: 'Flow by flow deployment does not compound. Ecosystem scale does.',
+      dimension: 'Serve',
+      stage: 'Serve',
+      text: 'When a subscriber calls about a bill or service issue, what happens beyond resolution?',
+      context: 'Every inbound contact is a revenue moment, not just a cost event.',
       options: [
-        { text: 'One flow at a time. Each use case is a separate project.', score: 1 },
-        { text: 'A few flows live, each built and run in isolation.', score: 2 },
-        { text: 'AI covers a cluster of related journeys.', score: 3 },
-        { text: 'AI is deployed across most of the customer ecosystem.', score: 4 },
-        { text: 'AI scales across the ecosystem by default. New journeys inherit it.', score: 5 }
+        { text: 'We resolve and close. Speed and CSAT are the metrics.', score: 1 },
+        { text: 'Reps occasionally pitch if the moment feels right.', score: 2 },
+        { text: 'Upsell prompts are in the workflow, execution varies.', score: 3 },
+        { text: 'Every contact is screened for revenue opportunity. Reps coached to convert.', score: 4 },
+        { text: 'Real time agent assist flags upsell moments. Conversion measured per contact reason, optimised continuously.', score: 5 }
       ]
     },
     {
-      dimension: 'Refined to your ecosystem',
-      text: 'Is your AI generic, or refined on your own customer data to fit how your customers behave?',
-      context: 'Generic models plateau fast. Models trained on your data keep improving.',
+      dimension: 'Grow',
+      stage: 'Grow',
+      text: 'How well does your operation grow revenue per subscriber across the household?',
+      context: 'The household is the unit of expansion. Selling each product in isolation leaves revenue on the table.',
       options: [
-        { text: 'Generic. Out of the box models, no tuning to our customers.', score: 1 },
-        { text: 'Lightly configured, not trained on our data.', score: 2 },
-        { text: 'Tuned on our data in the highest volume journeys.', score: 3 },
-        { text: 'Refined on our customer data across most of the operation.', score: 4 },
-        { text: 'Continuously retrained on live customer data. The AI gets sharper every cycle.', score: 5 }
+        { text: 'Each product sells in isolation. No household view.', score: 1 },
+        { text: 'We have household data but do not act on it operationally.', score: 2 },
+        { text: 'Cross sell happens at renewal or contract events only.', score: 3 },
+        { text: 'Cross sell is a CX metric. Reps see household composition and act on it.', score: 4 },
+        { text: 'Household revenue is the operating goal. AI flags next best product per household in real time.', score: 5 }
       ]
     },
     {
-      dimension: 'CX value, evidenced',
-      text: 'Is AI measurably improving experience, retention, and revenue, or only cutting cost?',
-      context: 'Cost saved is easy to measure. Value created is what the board reads.',
+      dimension: 'Save',
+      stage: 'Save',
+      text: 'When a high value subscriber signals they are leaving, what is your save conversion?',
+      context: 'In the post One Touch Switching window, save conversion on the high value cohort is where the P&L is won or lost.',
       options: [
-        { text: 'Cost only. We measure contacts deflected, not outcomes.', score: 1 },
-        { text: 'We track efficiency, customer impact is unmeasured.', score: 2 },
-        { text: 'AI improves some experience metrics like CSAT or FCR.', score: 3 },
-        { text: 'AI measurably lifts experience, retention, and revenue.', score: 4 },
-        { text: 'Every AI investment maps to experience, retention, and revenue in our P&L.', score: 5 }
+        { text: 'We do not track save conversion by value cohort.', score: 1 },
+        { text: 'Save attempts happen but conversion is not benchmarked.', score: 2 },
+        { text: 'Save conversion is measured at the base level, not by cohort.', score: 3 },
+        { text: 'Save conversion is benchmarked by cohort, with playbooks per segment.', score: 4 },
+        { text: 'Save conversion on the high value cohort is the highest priority operational metric. Continuously tuned, OTS compliant.', score: 5 }
       ]
     }
   ];
 
   const tiers = [
     {
-      name: 'AI Plugged In',
+      name: 'Leaking',
       range: [5, 9],
-      desc: 'You have done the easy part. AI is switched on in pockets of the operation, but with no data foundation underneath it and no scale behind it. Right now AI is a set of tools, not a capability.',
-      stage: 'Identify value levers',
-      stageNote: 'Before AI can scale, you need to know where it should create value. That is where the work begins.',
-      next: 'A value audit maps where AI can create value across your ecosystem, and what real customer data you have to build on. It is the first step of a value realization project.'
+      desc: 'Revenue is leaking at multiple stages of your lifecycle.',
+      stage: '',
+      stageNote: 'Your operation is processing contacts, not converting them. The COO sees throughput, the CFO sees cost. The revenue per subscriber upside sitting in acquire, onboard, serve, grow, and save is invisible to the CX function today.',
+      next: 'Start with a leak audit. Map where revenue is leaving across all five stages and identify the single biggest recovery.'
     },
     {
-      name: 'AI Piloting',
+      name: 'Patching',
       range: [10, 14],
-      desc: 'AI is live, but it runs flow by flow. Each use case is its own project, the customer data is underused, and the gains do not compound. You are proving AI works without proving it scales.',
-      stage: 'Identify value levers',
-      stageNote: 'The pilots show promise. The next move is mapping the full set of value levers so deployment stops being one project at a time.',
-      next: 'A value audit turns your scattered pilots into a single value map, and sizes the prize from scaling them across the ecosystem.'
+      desc: 'You are patching the worst leaks. The biggest is still costing you.',
+      stage: '',
+      stageNote: 'You see where revenue is at risk and are working on the most visible leaks. The operation has the levers but no through line. Each stage works in isolation, so wins do not compound across the lifecycle.',
+      next: 'Connect the stages. A lifecycle revenue audit shows where one fix in one stage compounds into recovery across the others.'
     },
     {
-      name: 'AI Scaling',
+      name: 'Tuning',
       range: [15, 19],
-      desc: 'AI is moving beyond single flows and the customer data foundation is taking shape. The challenge now is making scale the default rather than the exception.',
-      stage: 'Build the plan',
-      stageNote: 'You have the levers. The work now is sequencing them into a plan that scales AI across the ecosystem, with the data and governance to support it.',
-      next: 'A value audit pressure tests your data foundation and builds the plan to scale AI across the ecosystem, with the return quantified.'
+      desc: 'Most stages are converting. One or two are still leaking.',
+      stage: '',
+      stageNote: 'The operation is performing across most of the lifecycle. The remaining leak is concentrated in one or two stages where the lever has not yet been found. Sizeable but contained, and likely the highest return work on the table this year.',
+      next: 'Pressure test the leaky stage against operator benchmarks. We show what the top quartile is doing differently and the gap between you and them.'
     },
     {
-      name: 'AI Compounding',
-      range: [20, 24],
-      desc: 'AI is deployed at ecosystem scale, learning from real customer data, and the value is compounding. You are in the top quartile. The frontier now is individual customer level optimisation.',
-      stage: 'Generate value',
-      stageNote: 'The system works. The work now is execution discipline, holding the loop between data, AI, and outcome tight as you scale further.',
-      next: 'A value audit benchmarks you against the operators ahead of you and identifies the last increments of value still on the table.'
-    },
-    {
-      name: 'AI Native',
-      range: [25, 25],
-      desc: 'Your customer ecosystem runs on AI, refined continuously on live customer data. AI is the operating model, not a layer on top of it. You operate years ahead of peers.',
-      stage: 'Generate value',
-      stageNote: 'You are at the frontier. The work is staying there as scale, M&A, and new AI capability keep raising the bar.',
-      next: 'A value audit benchmarks you against the global frontier and stress tests the data and governance loop that keeps your edge.'
+      name: 'Compounding',
+      range: [20, 25],
+      desc: 'Revenue per subscriber is compounding across your lifecycle.',
+      stage: '',
+      stageNote: 'You are operating at top quartile telco level on most levers. The lifecycle is no longer a series of stages to be managed but a system that compounds. The work now is staying there as switching pressure, AI capability, and M&A keep raising the bar.',
+      next: 'A frontier audit benchmarks you against the global top quartile and stress tests the operational loop that keeps your edge.'
     }
   ];
 
@@ -209,6 +206,8 @@ if (track) {
     startpoint: wrap.querySelector('.assess-startpoint'),
     stageNext: wrap.querySelector('.assess-stage-next'),
     spectrumMarker: wrap.querySelector('.assess-spectrum-marker'),
+    leakStages: wrap.querySelectorAll('.leak-map-stage'),
+    leakBiggest: wrap.querySelector('.leak-map-biggest'),
     emailForm: wrap.querySelector('.assess-email-form'),
     emailSubmit: wrap.querySelector('.assess-email-submit')
   };
@@ -251,7 +250,7 @@ if (track) {
     els.backBtn.disabled = state.current === 0;
     els.nextBtn.disabled = state.selections[state.current] === null;
     els.nextBtn.querySelector('.assess-next-label').textContent =
-      state.current === questions.length - 1 ? 'See your AI value score' : 'Next';
+      state.current === questions.length - 1 ? 'Get my leak map' : 'Next';
   }
 
   function selectOption(idx) {
@@ -300,6 +299,31 @@ if (track) {
     return tiers.find(t => score >= t.range[0] && score <= t.range[1]) || tiers[0];
   }
 
+  function leakLevelFromScore(s) {
+    if (s <= 2) return 'high';
+    if (s === 3) return 'medium';
+    return 'low';
+  }
+
+  function renderLeakMap() {
+    if (!els.leakStages || !els.leakStages.length) return;
+    let lowestScore = Infinity;
+    let biggestIdx = 0;
+    state.selections.forEach((sel, qi) => {
+      const score = sel !== null ? questions[qi].options[sel].score : 1;
+      if (score < lowestScore) { lowestScore = score; biggestIdx = qi; }
+    });
+    els.leakStages.forEach((node, i) => {
+      const sel = state.selections[i];
+      const score = sel !== null ? questions[i].options[sel].score : 1;
+      node.setAttribute('data-leak-level', leakLevelFromScore(score));
+      node.classList.toggle('is-biggest', i === biggestIdx);
+    });
+    if (els.leakBiggest) {
+      els.leakBiggest.textContent = questions[biggestIdx].stage;
+    }
+  }
+
   function showResults() {
     const score = calculateScore();
     const tier = tierFromScore(score);
@@ -307,16 +331,13 @@ if (track) {
     if (els.scoreNum) els.scoreNum.textContent = String(score);
     els.stageName.textContent = tier.name;
     els.stageDesc.textContent = tier.desc;
-    if (els.startpoint) els.startpoint.textContent = tier.stage + '. ' + tier.stageNote;
+    if (els.startpoint) els.startpoint.textContent = tier.stageNote;
     els.stageNext.textContent = tier.next;
 
-    // Spectrum marker: 5 -> 0%, 25 -> 100%
-    const pct = Math.max(0, Math.min(100, ((score - 5) / 20) * 100));
+    renderLeakMap();
+
     setProgress(100);
     showScreen('results');
-    requestAnimationFrame(() => {
-      setTimeout(() => { els.spectrumMarker.style.left = pct + '%'; }, 50);
-    });
   }
 
   // Email capture
