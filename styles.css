@@ -795,30 +795,10 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
 
 /* ===== MID-PAGE CTA (drives to Gap Map assessment) ===== */
 .cta-mid {
-  background: linear-gradient(135deg, var(--dark-navy) 0%, #1a1e4a 100%);
-  padding: 72px 0;
+  background: var(--dark-navy);
+  padding: 56px 0;
   position: relative;
   overflow: hidden;
-}
-.cta-mid::before {
-  content: '';
-  position: absolute;
-  top: -40%;
-  left: -10%;
-  width: 60%;
-  height: 180%;
-  background: radial-gradient(ellipse at center, rgba(90, 79, 255, 0.18) 0%, transparent 60%);
-  pointer-events: none;
-}
-.cta-mid::after {
-  content: '';
-  position: absolute;
-  top: -20%;
-  right: -10%;
-  width: 50%;
-  height: 140%;
-  background: radial-gradient(ellipse at center, rgba(123, 111, 255, 0.12) 0%, transparent 60%);
-  pointer-events: none;
 }
 .cta-mid-inner {
   max-width: 720px;
@@ -826,30 +806,6 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
   text-align: center;
   position: relative;
   z-index: 1;
-}
-.cta-mid-eyebrow {
-  display: inline-block;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  color: #a5aaff;
-  margin: 0 0 16px;
-}
-.cta-mid-title {
-  font-size: clamp(28px, 4vw, 42px);
-  font-weight: 800;
-  color: var(--white);
-  letter-spacing: -0.8px;
-  margin: 0 0 18px;
-  line-height: 1.1;
-}
-.cta-mid-desc {
-  font-size: 17px;
-  line-height: 1.65;
-  color: rgba(255, 255, 255, 0.75);
-  margin: 0 auto 32px;
-  max-width: 620px;
 }
 .cta-mid-btn {
   display: inline-flex;
@@ -859,7 +815,7 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
 .cta-mid-btn .arrow { transition: transform 0.2s; }
 .cta-mid-btn:hover .arrow { transform: translateX(3px); }
 @media (max-width: 640px) {
-  .cta-mid { padding: 56px 0; }
+  .cta-mid { padding: 44px 0; }
 }
 
 /* ===== WHY FOUNDEVER ===== */
