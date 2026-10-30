@@ -1533,3 +1533,14 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
   letter-spacing: -0.5px;
   margin: 0 0 16px;
 }
+
+/* ===== Hero light-weight H1 (match insurance /seo/) ===== */
+.hero h1.hero-h1-light {
+  font-size: clamp(28px, 3.6vw, 48px);
+  font-weight: 300;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  margin-bottom: 0;
+  text-wrap: balance;
+}
+@media (max-width: 700px) { .br-wide { display: none; } }
