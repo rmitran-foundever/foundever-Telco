@@ -1446,3 +1446,90 @@ h4 { font-size: 18px; font-weight: 700; line-height: 1.4; }
   .cta-video-wrap { border-radius: 12px; }
   .cta-video-desc { font-size: 15.5px; }
 }
+
+
+/* ===== SOLUTIONS: accordion with SME video (lifted from insurance /seo/) ===== */
+.sol-acc { background: var(--gray-bg); padding: 80px 0; }
+.sol-acc-grid { display: grid; grid-template-columns: 400px minmax(0, 1fr); gap: 56px; align-items: stretch; }
+.sol-acc .solutions-header { margin-bottom: 44px; }
+.sol-acc .solutions-header h2 { white-space: normal; font-size: clamp(26px, 2.6vw, 34px); font-weight: 300; line-height: 1.2; margin-bottom: 18px; }
+.sol-acc .solutions-header p { white-space: normal; font-size: 16px; line-height: 1.6; max-width: none; }
+.sol-acc-list-wrap { display: flex; flex-direction: column; }
+.sol-acc-item { border-top: 1px solid var(--gray-medium); display: flex; flex-direction: column; }
+.sol-acc-item:last-child { border-bottom: 1px solid var(--gray-medium); }
+.sol-acc-head { margin: 0; }
+.sol-acc-btn { width: 100%; background: none; border: 0; font: inherit; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; color: var(--dark-navy); }
+.is-open > .sol-acc-head .sol-acc-btn { padding-bottom: 10px; }
+.sol-acc-txt { display: flex; flex-direction: column; gap: 6px; }
+.sol-acc-label { font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--purple); }
+.sol-acc-headline { font-size: clamp(19px, 1.7vw, 24px); font-weight: 400; line-height: 1.25; letter-spacing: -0.2px; }
+.sol-acc-btn::after { content: ""; flex-shrink: 0; width: 9px; height: 9px; border-right: 2px solid var(--purple); border-bottom: 2px solid var(--purple); transform: rotate(45deg) translateY(-3px); transition: transform 0.2s ease; }
+.is-open > .sol-acc-head .sol-acc-btn::after { transform: rotate(-135deg) translateY(-3px); }
+.sol-acc-btn:focus-visible { outline: 2px solid var(--purple); outline-offset: 4px; border-radius: 4px; }
+.sol-acc-body[hidden] { display: none; }
+.is-open > .sol-acc-body { display: block; }
+.sol-acc-item.is-open { flex: 1 1 auto; }
+.sol-acc-panel { padding: 0 0 20px; max-width: 500px; animation: solIn 0.25s ease; }
+@keyframes solIn { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .sol-acc-panel { animation: none; } }
+.sol-acc-desc { font-size: 14px; line-height: 1.5; color: #5B6270; margin: 0 0 8px; }
+.sol-acc-list { font-size: 13px; line-height: 1.5; font-weight: 400; color: var(--gray-text); margin: 0; }
+.sol-acc-video { border-radius: 16px; overflow: hidden; background: var(--dark-navy); position: relative; margin: 0; height: 100%; box-shadow: 0 10px 30px rgba(9,9,45,0.12); }
+.sol-acc-video video { display: block; width: 100%; height: 100%; object-fit: cover; }
+.sol-acc-video.is-playing .sol-play { display: none; }
+.sol-play { position: absolute; right: 14px; bottom: 14px; height: 44px; padding: 0 18px 0 14px; border-radius: 999px; border: 0; background: rgba(255,255,255,0.96); color: var(--dark-navy); display: inline-flex; align-items: center; gap: 8px; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; box-shadow: 0 6px 18px rgba(0,0,0,0.3); transition: transform 0.15s ease; }
+.sol-play svg { color: var(--purple); }
+.sol-play:hover { transform: scale(1.04); }
+.sol-play:focus-visible { outline: 3px solid var(--purple-light); outline-offset: 3px; }
+@media (max-width: 860px) {
+  .sol-acc-grid { grid-template-columns: 1fr; gap: 32px; }
+  .sol-acc-video { height: auto; max-width: 400px; margin: 0 auto; }
+  .sol-acc-video video { height: auto; aspect-ratio: 4 / 5; }
+  .sol-acc .solutions-header { margin-bottom: 32px; }
+  .sol-acc { padding: 56px 0; }
+  .sol-acc-headline { font-size: 20px; }
+}
+
+/* ===== CASE STUDIES carousel (lifted from insurance /seo/) ===== */
+.cases { background: var(--white); padding: 88px 0 72px; }
+.cases-head { text-align: center; margin-bottom: 44px; }
+.cases .eyebrow { margin-bottom: 12px; }
+.cases h2 { font-size: clamp(26px, 3vw, 36px); font-weight: 300; line-height: 1.2; color: var(--dark-navy); margin: 0; }
+.cs-carousel { position: relative; }
+.cs-track { list-style: none; margin: 0; padding: 0; display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; border-radius: 24px; }
+.cs-track::-webkit-scrollbar { display: none; }
+.cs-track:focus-visible { outline: 2px solid var(--purple); outline-offset: 4px; }
+.cs-slide { flex: 0 0 100%; scroll-snap-align: start; display: flex; }
+.cs-card { flex: 1 1 auto; display: grid; grid-template-columns: 1fr 1fr; min-height: 380px; background: var(--gray-bg); }
+.cs-text { padding: 48px 48px 48px 56px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+.cs-label { font-size: 14px; color: var(--gray-text); margin: 0 0 22px; }
+.cs-text h3 { font-size: clamp(24px, 2.6vw, 32px); font-weight: 400; line-height: 1.2; letter-spacing: -0.3px; color: var(--dark-navy); margin: 0 0 32px; }
+.cs-img { position: relative; min-height: 240px; }
+.cs-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.cs-arrow { position: absolute; top: 50%; transform: translateY(-50%); z-index: 2; width: 44px; height: 44px; border-radius: 50%; border: 0; background: var(--purple); color: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 14px rgba(90,79,255,0.35); transition: background 0.15s ease, opacity 0.15s ease; }
+.cs-arrow:hover { background: #4a3fe6; }
+.cs-arrow:focus-visible { outline: 3px solid var(--purple-light); outline-offset: 3px; }
+.cs-arrow[disabled] { opacity: 0.35; cursor: default; }
+.cs-prev { left: -22px; }
+.cs-next { right: -22px; }
+.cs-dots { display: flex; justify-content: center; gap: 8px; margin-top: 24px; }
+.cs-dot { width: 8px; height: 8px; padding: 0; border-radius: 50%; border: 0; background: var(--gray-medium); cursor: pointer; transition: background 0.15s ease, transform 0.15s ease; }
+.cs-dot.is-active { background: var(--purple); transform: scale(1.25); }
+@media (max-width: 860px) {
+  .cs-card { grid-template-columns: 1fr; min-height: 0; }
+  .cs-img { order: -1; height: 200px; min-height: 0; }
+  .cs-text { padding: 28px 24px 32px; }
+  .cs-prev { left: 8px; top: 100px; }
+  .cs-next { right: 8px; top: 100px; }
+  .cases { padding: 56px 0 48px; }
+}
+
+/* Make .final-cta h2 inherit the same style as the previous h1 */
+.final-cta h2 {
+  color: var(--white);
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  margin: 0 0 16px;
+}

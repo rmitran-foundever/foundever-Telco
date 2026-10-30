@@ -16,27 +16,75 @@ if (track) {
   track.addEventListener('mouseleave', () => track.style.animationPlayState = 'running');
 }
 
-// ===== Solutions Tab Navigation =====
-(function() {
-  const items = document.querySelectorAll('.sol-bar-item');
-  const cards = document.querySelectorAll('.sol-card');
-  if (!items.length) return;
-
-  items.forEach(item => {
-    item.addEventListener('click', () => {
-      const idx = item.dataset.index;
-      items.forEach(i => i.classList.remove('active'));
-      item.classList.add('active');
-      cards.forEach(c => c.classList.remove('visible'));
-      const target = document.querySelector('.sol-card[data-card="' + idx + '"]');
-      if (target) {
-        target.style.animation = 'none';
-        target.offsetHeight;
-        target.style.animation = '';
-        target.classList.add('visible');
-      }
+// ===== Solutions Accordion (sol-acc) =====
+(function(){
+  var w = document.getElementById('solAcc');
+  if (!w) return;
+  var items = [].slice.call(w.querySelectorAll('.sol-acc-item'));
+  items.forEach(function(it){
+    var b = it.querySelector('.sol-acc-btn');
+    b.addEventListener('click', function(){
+      if (it.classList.contains('is-open')) return;
+      items.forEach(function(o){
+        var ob = o.querySelector('.sol-acc-btn');
+        var op = o.querySelector('.sol-acc-body');
+        var on = o === it;
+        o.classList.toggle('is-open', on);
+        ob.setAttribute('aria-expanded', on ? 'true' : 'false');
+        op.hidden = !on;
+      });
     });
   });
+})();
+
+// ===== Solutions video (click-to-play) =====
+(function(){
+  var f = document.getElementById('solVideo');
+  if (!f) return;
+  var v = f.querySelector('video');
+  var b = f.querySelector('.sol-play');
+  b.addEventListener('click', function(){
+    v.currentTime = 0;
+    v.controls = true;
+    f.classList.add('is-playing');
+    v.play();
+  });
+  v.addEventListener('ended', function(){
+    v.controls = false;
+    f.classList.remove('is-playing');
+    v.currentTime = 0;
+  });
+})();
+
+// ===== Case studies carousel =====
+(function(){
+  var t = document.getElementById('csTrack');
+  if (!t) return;
+  var slides = [].slice.call(t.children);
+  var dots = [].slice.call(document.querySelectorAll('#csDots .cs-dot'));
+  var prev = document.querySelector('.cs-prev');
+  var next = document.querySelector('.cs-next');
+  function idx(){ return Math.round(t.scrollLeft / t.clientWidth); }
+  function go(i){
+    i = Math.max(0, Math.min(slides.length - 1, i));
+    t.scrollTo({ left: i * t.clientWidth, behavior: 'smooth' });
+  }
+  function ui(){
+    var i = idx();
+    dots.forEach(function(d, k){ d.classList.toggle('is-active', k === i); });
+    if (prev) prev.disabled = i === 0;
+    if (next) next.disabled = i === slides.length - 1;
+  }
+  if (prev) prev.addEventListener('click', function(){ go(idx() - 1); });
+  if (next) next.addEventListener('click', function(){ go(idx() + 1); });
+  dots.forEach(function(d, k){ d.addEventListener('click', function(){ go(k); }); });
+  t.addEventListener('scroll', function(){ window.requestAnimationFrame(ui); }, { passive: true });
+  t.addEventListener('keydown', function(e){
+    if (e.key === 'ArrowRight') { e.preventDefault(); go(idx() + 1); }
+    if (e.key === 'ArrowLeft')  { e.preventDefault(); go(idx() - 1); }
+  });
+  window.addEventListener('resize', function(){ t.scrollLeft = idx() * t.clientWidth; ui(); });
+  ui();
 })();
 
 // ===== Count-Up Animation (integers + decimals) =====
