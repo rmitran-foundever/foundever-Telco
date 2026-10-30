@@ -64,8 +64,8 @@
         </div>
         <p>Make CX your accelerator for revenue and retention across every customer relationship, by orchestrating AI assisted operations and bringing excellence to every customer contact.</p>
         <div class="hero-cta-group">
-          <a href="#cta" class="btn btn-cta-primary" data-start-assessment>
-            Get your gap map
+          <a href="#cta" class="btn btn-cta-primary">
+            Find your CX blindspots
             <span class="arrow">&rarr;</span>
           </a>
           <a href="#cta" class="btn btn-dark">Let's talk</a>
@@ -149,7 +149,7 @@
       </div>
 
       <div class="stats-cta">
-        <a href="#cta" class="btn btn-primary" data-start-assessment>Get your gap map <span class="arrow">&rarr;</span></a>
+        <a href="#cta" class="btn btn-primary">Find your CX blindspots <span class="arrow">&rarr;</span></a>
       </div>
     </div>
   </section>
@@ -263,7 +263,7 @@
   <section class="cta-mid">
     <div class="container">
       <div class="cta-mid-inner">
-        <a href="#cta" class="btn btn-primary cta-mid-btn" data-start-assessment>Find your CX blindspots <span class="arrow">&rarr;</span></a>
+        <a href="#cta" class="btn btn-primary cta-mid-btn">Find your CX blindspots <span class="arrow">&rarr;</span></a>
       </div>
     </div>
   </section>
@@ -497,145 +497,20 @@
     <div class="cta-circle cta-circle-2"></div>
     <div class="cta-circle cta-circle-3"></div>
     <div class="container">
-      <div class="cta-layout">
-      <div class="assessment-wrap">
-        <!-- INTRO -->
-        <div class="assess-screen" id="screen-intro" data-active="true">
-          <span class="assess-eyebrow">The Lifecycle Gap Map</span>
-          <h2 class="assess-title">Where in your CX journey is the gap?</h2>
-          <p class="assess-desc">Across the telco lifecycle, every operator has one stage where the gap is widest. Pick your board's priority, grow revenue or reduce cost, and this 5 question diagnostic finds where the gap is, benchmarks it against top operators, and names the single move that closes it.</p>
-          <div class="assess-meta">
-            <span>5 questions</span>
-            <span>3 minutes</span>
-            <span>Benchmarked against top operators</span>
-          </div>
-          <button type="button" class="assess-btn-primary" data-action="start">Get my gap map <span class="arrow">&rarr;</span></button>
+      <div class="cta-video-block">
+        <span class="cta-video-eyebrow">From our team</span>
+        <h2 class="cta-video-title">Advancing telco CX, together.</h2>
+        <p class="cta-video-desc">Ryan on how Foundever helps telecoms uncover blind spots, benchmark performance, and name the moves that drive revenue, retention, and efficiency.</p>
+        <div class="cta-video-wrap">
+          <video class="cta-video" controls preload="metadata" playsinline>
+            <source src="assets/ryan-speaking.mov" type="video/mp4">
+            <source src="assets/ryan-speaking.mov" type="video/quicktime">
+            Your browser does not support the video tag.
+          </video>
         </div>
-
-        <!-- QUESTION (driven by script.js) -->
-        <div class="assess-screen" id="screen-question">
-          <div class="assess-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
-            <div class="assess-progress-fill"></div>
-          </div>
-          <span class="assess-counter">Question <span class="assess-q-current">1</span> of <span class="assess-q-total">5</span></span>
-          <span class="assess-eyebrow assess-dimension"></span>
-          <h3 class="assess-question"></h3>
-          <p class="assess-context"></p>
-          <div class="assess-options" role="radiogroup" aria-label="Answer options"></div>
-          <div class="assess-nav">
-            <button type="button" class="assess-btn-secondary" data-action="back">&larr; Back</button>
-            <button type="button" class="assess-btn-primary" data-action="next" disabled>
-              <span class="assess-next-label">Next</span> <span class="arrow">&rarr;</span>
-            </button>
-          </div>
+        <div class="cta-video-cta">
+          <a href="#" class="btn btn-cta-primary">Let's talk <span class="arrow">&rarr;</span></a>
         </div>
-
-        <!-- RESULTS -->
-        <div class="assess-screen" id="screen-results">
-          <span class="assess-eyebrow">Your Lifecycle Gap Map</span>
-
-          <div class="leak-map" aria-label="Lifecycle gap map">
-            <div class="leak-map-stage" data-stage="acquire">
-              <span class="leak-map-stage-name">Acquire</span>
-              <span class="leak-map-stage-bar"></span>
-            </div>
-            <div class="leak-map-stage" data-stage="onboard">
-              <span class="leak-map-stage-name">Onboard</span>
-              <span class="leak-map-stage-bar"></span>
-            </div>
-            <div class="leak-map-stage" data-stage="serve">
-              <span class="leak-map-stage-name">Serve</span>
-              <span class="leak-map-stage-bar"></span>
-            </div>
-            <div class="leak-map-stage" data-stage="grow">
-              <span class="leak-map-stage-name">Grow</span>
-              <span class="leak-map-stage-bar"></span>
-            </div>
-            <div class="leak-map-stage" data-stage="save">
-              <span class="leak-map-stage-name">Save</span>
-              <span class="leak-map-stage-bar"></span>
-            </div>
-          </div>
-          <p class="leak-map-callout">Your biggest gap: <strong class="leak-map-biggest"></strong></p>
-
-          <h2 class="assess-stage-name"></h2>
-          <p class="assess-stage-desc"></p>
-
-          <div class="assess-next-box">
-            <span class="assess-next-eyebrow">Your diagnosis</span>
-            <p class="assess-startpoint"></p>
-          </div>
-
-          <div class="assess-next-box">
-            <span class="assess-next-eyebrow">Your next move</span>
-            <p class="assess-stage-next"></p>
-          </div>
-
-          <form class="assess-email-form">
-            <label class="assess-email-label" for="assess-email">Walk through your gap map with us</label>
-            <div class="assess-email-row">
-              <input type="email" id="assess-email" name="email" required placeholder="you@yourcompany.com" class="assess-email-input">
-              <button type="submit" class="assess-btn-primary assess-email-submit">
-                <span class="assess-submit-label">Send</span> <span class="arrow">&rarr;</span>
-              </button>
-            </div>
-          </form>
-
-          <button type="button" class="assess-btn-text" data-action="retake">Retake the diagnostic</button>
-        </div>
-      </div>
-
-      <!-- Sketch-style mockup of the deliverable report -->
-      <aside class="cta-mockup" aria-hidden="true">
-        <div class="cta-mockup-card">
-          <div class="cta-mockup-chrome">
-            <span class="cta-mockup-dot"></span>
-            <span class="cta-mockup-dot"></span>
-            <span class="cta-mockup-dot"></span>
-          </div>
-          <div class="cta-mockup-body">
-            <div class="cta-mockup-sidebar">
-              <div class="cta-mockup-logo">foundever<span>&trade;</span></div>
-              <ul class="cta-mockup-nav">
-                <li>Overview</li>
-                <li>Impact score</li>
-                <li class="active">Your roadmap</li>
-                <li>LTV analysis</li>
-                <li>Action plan</li>
-                <li>Benchmark</li>
-              </ul>
-            </div>
-            <div class="cta-mockup-content">
-              <h4 class="cta-mockup-title">Get your CX impact roadmap</h4>
-              <div class="cta-mockup-subtitle">CX impact benchmarked against peer operators</div>
-              <div class="cta-mockup-kpis">
-                <div class="cta-mockup-kpi">
-                  <span class="cta-mockup-kpi-num">12</span>
-                  <span class="cta-mockup-kpi-lbl">CX impact score</span>
-                </div>
-                <div class="cta-mockup-kpi">
-                  <span class="cta-mockup-kpi-num">&euro;22M</span>
-                  <span class="cta-mockup-kpi-lbl">Annual LTV gap</span>
-                </div>
-              </div>
-              <div class="cta-mockup-chart">
-                <div class="cta-mockup-donut">
-                  <div class="cta-mockup-donut-center">
-                    <span class="cta-mockup-donut-num">12</span>
-                    <span class="cta-mockup-donut-lbl">vs peer 17</span>
-                  </div>
-                </div>
-                <div class="cta-mockup-legend">
-                  <div class="cta-mockup-legend-item"><span class="cta-mockup-legend-dot cta-mockup-legend-dot-1"></span>Retention</div>
-                  <div class="cta-mockup-legend-item"><span class="cta-mockup-legend-dot cta-mockup-legend-dot-2"></span>Revenue per Subscriber</div>
-                  <div class="cta-mockup-legend-item"><span class="cta-mockup-legend-dot cta-mockup-legend-dot-3"></span>Efficiency</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </aside>
-
       </div>
     </div>
   </section>
